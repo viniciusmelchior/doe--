@@ -112,6 +112,10 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usuario = User::find($id);
+        $endereco = Endereco::where('user_id', $id);
+
+        $endereco->delete();
+        $usuario->delete();
     }
 }

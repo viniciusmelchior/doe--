@@ -20,4 +20,9 @@ class Endereco extends Model
         'estado',
         'numero'
     ];
+
+    public function usuario()
+    {
+        $this->belongsTo(User::class);
+    }
 }

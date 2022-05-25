@@ -78,7 +78,9 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $usuario = User::find($id)->with('endereco')->first();
+
+        return $usuario;
     }
 
     /**
